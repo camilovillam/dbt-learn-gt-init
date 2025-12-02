@@ -1,9 +1,9 @@
 select 
     id as payment_id,
     orderid as order_id,
-    amount as payment_amount,
+    amount / 100 as payment_amount,
     status as payment_status,
     paymentmethod as payment_method,
-    created as payment_created
+    created as payment_created_at
 
     from raw.stripe.payment
